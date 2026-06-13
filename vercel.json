@@ -1,0 +1,9 @@
+{
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/.next",
+  "framework": "nextjs",
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://authpass-api.vercel.app/api/:path*" },
+    { "source": "/fhir/:path*", "destination": "https://authpass-api.vercel.app/fhir/:path*" }
+  ]
+}
