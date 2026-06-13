@@ -36,13 +36,8 @@ app = FastAPI(title="AuthPass API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        os.environ.get("FRONTEND_URL", "http://localhost:3000"),
-        "http://localhost:3000",
-        "http://localhost:3001",
-        "https://*.vercel.app",
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
