@@ -117,8 +117,9 @@ export default function VoiceAgentUI({
 
       {/* Error */}
       {error && (
-        <div className="bg-red-950/60 border border-red-800 rounded-xl px-4 py-3 text-sm text-red-300">
-          {error}
+        <div className="bg-slate-800/60 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-400">
+          <span className="text-amber-400 font-medium">Voice unavailable</span> — use the text input below instead.
+          <span className="block text-xs text-slate-600 mt-1">{error}</span>
         </div>
       )}
 
